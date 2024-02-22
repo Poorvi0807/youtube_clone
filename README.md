@@ -97,7 +97,7 @@ bash
 
 Contributions are always welcome!
 
-1. *Vivek Yadav*
+1. *Porrvi Singh Thakur*
 
    - GitHub: [@Poorvi Singh Thakur](https://github.com/Poorvi0807)
    - LinkedIn:[Poorvi Sign Thakur](https://www.linkedin.com/in/poorvi-thakur-5203b21a3/)
