@@ -47,19 +47,21 @@ https://youtube-chi-dusky.vercel.app/
 ## Snapshots
 
 
-*Home page*
+## Home page*
 
 <img width="960" alt="utube" src="https://github.com/Poorvi0807/youtube_clone/assets/128929403/56d337ce-ebde-4810-abb4-2e15d3acdd35">
 <hr>
 
-*Video Detail Page*
+## Video Detail Page
 <img width="960" alt="u" src="https://github.com/Poorvi0807/youtube_clone/assets/128929403/51c29ed7-231f-403c-97ea-2f19f71e3ea5">
 
-*Searched Page*
+## Searched Page
 <img width="957" alt="uu" src="https://github.com/Poorvi0807/youtube_clone/assets/128929403/65698db5-7a78-46ef-ae8a-4ca9e101d607">
 
 
-*Video detail*
+
+
+## Video detail
 <img width="956" alt="uuu" src="https://github.com/Poorvi0807/youtube_clone/assets/128929403/fae8e375-4654-47c1-83ca-82f9fca9393a">
 
 
@@ -69,7 +71,7 @@ https://youtube-chi-dusky.vercel.app/
 Clone the Repository
 
 ```bash
-  git clone https://github.com/105vivek/Electronic_Store.git
+  git clone https://github.com/Poorvi0807/youtube_clone.git
 ```
     
 Install Dependencies
