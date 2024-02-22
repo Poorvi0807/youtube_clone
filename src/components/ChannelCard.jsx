@@ -1,67 +1,63 @@
-import { useState, useEffect } from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, CardContent, CardMedia, Typography } from "@mui/material";
+import { CheckCircle } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import { demoProfilePicture } from "../utils/constants";
 
-import { fetchFromAPI } from "../utils/fetchFromAPI";
-
-import { Sidebar, Videos } from "./";
-// import Sidebar from "./Sidebar";
-// import Videos from "./Videos";
-
-const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("New");
-  const [videos, setVideos] = useState([]);
-
-  useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
-      setVideos(data.items)
-    );
-  }, [selectedCategory]);
-
+const ChannelCard = ({ ChannelDetail, marginTop }) => {
   return (
-    <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
-      <Box
-        sx={{
-          height: { sx: "auto", md: "92vh" },
-          borderright: "1px solid #3d3d3d",
-          px: { sx: 0, md: 2 },
-        }}
-      >
-        <Sidebar
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
-        <Typography
-          className="copyright"
-          variant="body2"
-          sx={{ mt: 1.5, color: "#fff" }}
-        >
-          Copyright 2022 JSM Media
-        </Typography>
-      </Box>
-
-      {/* videos */}
-      <Box
-        p={2}
-        sx={{
-          overflowY: "auto",
-          height: "90vh",
-          flex: 2,
-        }}
-      >
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          mb={2}
+    <Box
+      sx={{
+        boxShadow: "none",
+        borderRadius: "20px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: { xs: "356px", md: "320px" },
+        height: "326px",
+        margin: "auto",
+        marginTop,
+      }}
+    >
+      <Link to={`/channel/${ChannelDetail?.id?.channelId}`}>
+        <CardContent
           sx={{
-            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            textAlign: "center",
+            color: "#fff",
           }}
         >
-          {selectedCategory} <span style={{ color: "#f31503" }}>videos</span>
-        </Typography>
-        <Videos videos={videos} />
-      </Box>
-    </Stack>
+          <CardMedia
+            image={
+              ChannelDetail?.snippet?.thumbnails?.high?.url ||
+              demoProfilePicture
+            }
+            alt={ChannelDetail?.snippet?.title}
+            sx={{
+              borderRadius: "50%",
+              height: "180px",
+              width: "180px",
+              mb: 2,
+              border: "1px solid #e3e3e3",
+            }}
+          />
+          <Typography variant="h6">
+            {ChannelDetail?.snippet?.title}
+            <CheckCircle sx={{ fontSize: 14, color: "gray", ml: "5px" }} />
+          </Typography>
+          {ChannelDetail?.statistics?.subscriberCount && (
+            <Typography>
+              {parseInt(
+                ChannelDetail?.statistics?.subscriberCount
+              ).toLocaleString()}
+              subscribers
+            </Typography>
+          )}
+        </CardContent>
+      </Link>
+    </Box>
   );
 };
 
-export default Feed;
+export default ChannelCard;
