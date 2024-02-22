@@ -27,7 +27,7 @@ const SearchFeed = () => {
         flex: 2,
       }}
     >
-      {/* <Typography
+      <Typography
         variant="h4"
         fontWeight="bold"
         mb={2}
@@ -37,7 +37,7 @@ const SearchFeed = () => {
       >
         Search Results for:{" "}
         <span style={{ color: "#f31503" }}>{searchTerm}</span> videos
-      </Typography> */}
+      </Typography>
       <Videos videos={videos} />
     </Box>
   );
