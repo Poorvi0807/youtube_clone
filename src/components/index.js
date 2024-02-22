@@ -1,10 +1,3 @@
-import React from 'react'
-
-const index = () => {
-  return (
-    <div>Index Inside Components
-    </div>
-  )
-}
-
-export default index
+export { default as Navbar } from "./Navbar";
+export { default as Feed } from "./Feed";
+export { default as ChannelDetail } from "./ChannelDetail";
