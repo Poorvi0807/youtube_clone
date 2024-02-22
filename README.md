@@ -69,7 +69,7 @@ https://youtube-chi-dusky.vercel.app/
 Clone the Repository
 
 ```bash
-  git clone https://github.com/105vivek/Electronic_Store.git
+  git clone https://github.com/Poorvi0807/youtube_clone.git
 ```
     
 Install Dependencies
