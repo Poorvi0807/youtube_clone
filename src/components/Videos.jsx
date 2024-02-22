@@ -16,3 +16,14 @@ const Videos = ({ videos, direction }) => {
       margin="auto"
       // border="1px solid red"
     >
+      {videos.map((item, idx) => (
+        <Box key={idx}>
+          {item.id.videoId && <VideoCard video={item} />}
+          {item.id.channelId && <ChannelCard ChannelDetail={item} />}
+        </Box>
+      ))}
+    </Stack>
+  );
+};
+
+export default Videos;
