@@ -6,3 +6,13 @@ const Videos = ({ videos, direction }) => {
 
   if (!videos?.length) return "Loading...";
 
+  return (
+    <Stack
+      direction={direction || "row"}
+      flexWrap="wrap"
+      flex="1"
+      justifyContent="center"
+      gap={2}
+      margin="auto"
+      // border="1px solid red"
+    >
