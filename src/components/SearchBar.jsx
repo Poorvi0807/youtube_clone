@@ -28,7 +28,7 @@ const SearchBar = () => {
         mr: { sm: 5 },
       }}
     >
-      <input
+      {/* <input
         className="search-bar"
         placeholder="Search..."
         value={searchTerm}
@@ -36,7 +36,7 @@ const SearchBar = () => {
       />
       <IconButton type="submit" sx={{ p: "10px", color: "red" }}>
         <Search />
-      </IconButton>
+      </IconButton> */}
     </Paper>
   );
 };
