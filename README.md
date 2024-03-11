@@ -100,7 +100,7 @@ Contributions are always welcome!
 
 
    - GitHub: [@Poorvi Singh Thakur](https://github.com/Poorvi0807)
-   - LinkedIn:[Poorvi Sign Thakur](https://www.linkedin.com/in/poorvi-thakur-5203b21a3/)
+   - LinkedIn:[Poorvi Singh Thakur](https://www.linkedin.com/in/poorvi-thakur-5203b21a3/)
 
 
 2. *Anjali Sinha*
